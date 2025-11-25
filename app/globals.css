@@ -1,24 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
-  background-color: #020617;
-  color: #F9FAFB;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #E9F7FF;
+  color: #0F172A;
 }
 
-.main-gradient {
-  background: radial-gradient(circle at top, #22c55e11, transparent 55%),
-              radial-gradient(circle at bottom, #6366f111, transparent 55%);
+/* Full-page gradient like Figma */
+.quiz-bg {
+  background:
+    radial-gradient(circle at top left, #a9ddff 0, transparent 55%),
+    radial-gradient(circle at bottom right, #9fe7ff 0, transparent 55%),
+    #E9F7FF;
 }
 
-.card-glass {
-  background: linear-gradient(135deg, #0f172aee, #020617ee);
-  border: 1px solid #1e293b;
-  backdrop-filter: blur(20px);
+/* Inner frame card */
+.quiz-frame {
+  background: radial-gradient(circle at top, #ffffff 0, #f2fbff 60%);
+}
+
+/* Question banner */
+.question-card {
+  background: linear-gradient(180deg, #d6f0ff 0, #eaf7ff 100%);
+}
+
+/* Option base styles */
+.option-card {
+  background: #F4FBFF;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.option-card:hover {
+  background: #E0F3FF;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10);
+  transform: translateY(-1px);
+}
+
+/* Navigation buttons */
+.nav-button {
+  background: #E4F4FF;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.nav-button:hover {
+  background: #D4ECFF;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10);
 }

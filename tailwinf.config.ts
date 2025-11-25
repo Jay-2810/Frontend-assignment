@@ -1,33 +1,34 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        background: "#0B1120",
-        surface: "#0F172A",
-        muted: "#1E293B",
-        primary: "#6366F1",
-        primarySoft: "#4F46E5",
-        borderSubtle: "#1F2937",
-        textPrimary: "#F9FAFB",
-        textSecondary: "#9CA3AF",
-        success: "#22C55E",
-        warning: "#FACC15",
-        danger: "#EF4444",
+        pageBg: "#E9F7FF",
+        frameBorder: "#4FAEFF",
+        frameInner: "#F4FBFF",
+        questionBg: "#DDF1FF",
+        optionBg: "#F4FBFF",
+        optionHover: "#E0F3FF",
+        accent: "#155E75",
+        accentSoft: "#5AB5FF",
+        progressBar: "#111827",
+        progressTrack: "#E5E7EB",
+        buttonBg: "#E4F4FF",
+        buttonHover: "#D4ECFF",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Playfair Display", "serif"],
       },
       boxShadow: {
-        card: "0 18px 45px rgba(15,23,42,0.65)",
+        frame: "0 24px 60px rgba(15, 23, 42, 0.18)",
+        soft: "0 10px 25px rgba(15, 23, 42, 0.10)",
       },
       borderRadius: {
-        xl: "1rem",
-        "2xl": "1.25rem",
+        frame: "40px",
+        card: "18px",
       },
     },
   },
